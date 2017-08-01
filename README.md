@@ -52,7 +52,7 @@ They keeps 3 and 5 multiples, but every time a multiple of 6 appears, they want 
 
 Write a program export those numbers from 1 to 100.
 
-## Level 4: Composite and prime multiples
+## Level 4: Composite and prime multiples 2
 Now they wants to make everything harder. If it is a multiple of 6, they only want Orange, not Fizz.
 
 Range: from 1 to 100 (recommended).
@@ -66,3 +66,5 @@ Range: from 1 to 100 (recommended).
 Check a number, print all the factors out, and say if it is prime or not.
 
 Range: from 1 to 100 (recommended).
+
+## Other repositories
