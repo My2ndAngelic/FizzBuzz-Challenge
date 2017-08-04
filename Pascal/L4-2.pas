@@ -4,15 +4,15 @@ uses crt, sysutils;
 var i, n: qword; // Assuming you are
     o: string;
 
-function CheckPrime1(number:qword): boolean; // Check prime
+function CheckPrime2(number:qword): boolean; // Check prime
 var k: qword;
 begin
-   CheckPrime1:=TRUE;
-   for k:= 2 to (number-1) do
+   CheckPrime2:=TRUE;
+   for k:= 2 to (number div 2) do
      begin
        if (number mod k = 0) then
          begin
-           CheckPrime1:=FALSE;
+           CheckPrime2:=FALSE;
            break;
          end;
      end;
@@ -29,7 +29,7 @@ begin
     begin
 // Check condition
       o:= IntToStr(i) + ' ';
-      if CheckPrime1(i) = TRUE then
+      if CheckPrime2(i) = TRUE then
         o:= o + 'Prime'
       else o:= o + 'Composite';
       writeln(o);

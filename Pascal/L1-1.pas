@@ -1,13 +1,13 @@
 uses crt, sysutils;
 
-function Check3Div:boolean;
+function Check3Div: boolean;
 begin
   if i mod 3 = 0
     Check3Div:= TRUE
   else Check3Div:= FALSE;
 end;
 
-function Check5Div:boolean;
+function Check5Div: boolean;
 begin
   if i mod 5 = 0
     Check5Div:= TRUE
