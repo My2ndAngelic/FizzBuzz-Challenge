@@ -2,7 +2,7 @@
 
 Dedicated to Tom Scott. Please check out [his video](https://www.youtube.com/watch?v=QPZ0pIK_wsc)
 
-Link to the[original version](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/)
+Link to the [original version](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/)
 
 Here is the rule of the game. Please understand that I change a little bit the rule of this game. Tom Scott's version is only to 100 and three prime multiples.
 
