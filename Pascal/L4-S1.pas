@@ -1,8 +1,7 @@
 //Find the next prime
 program FizzBuzzL4S;
 uses crt, sysutils;
-var i, n: qword; // Assuming you are
-    o: string;
+var l, n: qword; // Assuming you are
 
 function CheckPrime2(number:qword): boolean; // Check prime
 var k: qword;
@@ -21,19 +20,15 @@ end;
 //------------//
 
 begin
-  o:='';
   write('Please enter n: ');
   readln(n);
-  writeln('1 Special');
-  for i:= 2 to n do
+  l:= n + 1;
+  repeat
     begin
-// Check condition
-      o:= IntToStr(i) + ' ';
-      if CheckPrime2(i) = TRUE then
-        begin
-          o:= o + 'Prime';
-          writeln(o);
-        end;
-    end;
+      CheckPrime2(l);
+      l:= l + 1;
+    end
+  until CheckPrime2(l) = TRUE;
+  writeln('The next prime number is: ',l);
   readln;
 end.

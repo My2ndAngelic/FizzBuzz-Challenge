@@ -4,7 +4,7 @@ uses crt, sysutils;
 var i, n: qword; // Assuming you are not a good person
     o: string;
 
-function CheckPrime2(number:qword): boolean; // Check prime
+function CheckPrime2(number: qword): boolean; // Check prime
 var k: qword;
 begin
    CheckPrime2:=TRUE;
@@ -18,22 +18,30 @@ begin
      end;
 end;
 
+function Divisor(number,l:qword): boolean;
+begin
+  if (number mod l = 0) then
+    Divisor:= TRUE
+  else Divisor:= FALSE;
+end;
 //------------//
 
 begin
-  o:='';
-  write('Please enter n: ');
+  clrscr;
+  write('Please enter the number: ');
   readln(n);
-  writeln('1 Special');
-  for i:= 2 to n do
+  o:= IntToStr(n) + ' ';
+//  writeln('1 Special');
+  if CheckPrime2(n) = TRUE then
+    o:= o + '1 ' + IntToStr(n)
+  else
     begin
-// Check condition
-      o:= IntToStr(i) + ' ';
-      if CheckPrime2(i) = TRUE then
+      for i:= 1 to n do
         begin
-          o:= o + 'Prime';
-          writeln(o);
+          if Divisor(n,i) = TRUE then
+            o:=o + ' ' + IntToStr(i);
         end;
     end;
+  writeln(o);
   readln;
 end.
